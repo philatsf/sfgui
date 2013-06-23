@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>D3 Fun</title>
+</head>
+<body>
+<h1>Click On SVG Icon For Animation</h1>
+<div><svg id="test" width="700" height="500"></svg></div>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="sficon.js"></script>
+<script>
+    var sizes = [16, 32, 64, 128, 256];
+    var x = 10;
+    for (var i = 0; i < sizes.length; i++) {
+        var sf = new SFIcon("#test", x, 10, sizes[i]);
+        sf.show();
+        x += sizes[i] + sizes[i]/2;
+    }
+</script>
+</body>
+</html>
